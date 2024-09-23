@@ -91,6 +91,7 @@ function Home() {
                         </div>
                     </div>
                     <div className="second-section">
+                    <br/>    <br/>    <br/>
                         <div className="second-section-container">
                             <div className="info-box info-box1">
                             <img src={icon3} alt="Finance Icon" className="info-icon"/>

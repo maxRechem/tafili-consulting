@@ -1,3 +1,5 @@
+
+
 .Home {
     margin-top: -7%;
     min-height: 100vh; /* La hauteur du conteneur prend toute la hauteur de la vue */
@@ -45,10 +47,10 @@
 }
 /* Assure-toi que ce style s'applique à ta première section */
 .first-section {
-    position: relative;
+    /*¨position: relative; */
     width: 100%;
     height: 100vh; /* Ajuste en fonction de ta mise en page */
-    background-image: url('../Img/teamfond.jpg'); /* Chemin vers ton image */
+    background-image: url('../Img/teamfond.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -83,10 +85,10 @@
 }
 .text-overlay h1 {
     color: #ffffff; /* Couleur du texte en blanc pour un meilleur contraste */
-    font-size: 10rem; /* Ajuste la taille du texte selon tes besoins */
+    font-size: 9rem; /* Ajuste la taille du texte selon tes besoins */
     padding: 40px; /* Ajoute un peu d'espace autour du texte */
     text-align: left;
-    margin-left: 10%;
+    margin-left: 5%;
     width: 60%;
     font-family: 'Baskerville', 'Times New Roman', Times, serif;
 }
@@ -95,7 +97,7 @@
     display: inline-block;
     color: #fff;
     text-decoration: none !important;
-    font-size: 28px;
+    font-size: 2.5rem;
     padding: 8px 16px;
     position: relative;
     transition: color 0.3s ease;
@@ -124,6 +126,16 @@
     width: 100%;
 }
 
+/* Make text size responsive */
+.info-box h2, 
+.info-box p {
+    font-size: calc(3rem + 1vw); /* Font size adapts to viewport */
+}
+.text-overlay h1
+ {
+    font-size: calc(4rem + 1vw); /* Font size adapts to viewport */
+}
+
 /* Animation pour le fondu */
 @keyframes fadeIn {
     0% {
@@ -141,10 +153,11 @@
 .second-section {
     background-color: #f4f4f4; /* Couleur de fond pour la section */
     padding: 50px 0; /* Espacement autour de la section */
-    height: 80vh; /* Hauteur de la section (80% de la hauteur de la fenêtre) */
+    height: auto; /* Hauteur de la section (80% de la hauteur de la fenêtre) */
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .second-section-container {
@@ -152,21 +165,22 @@
     justify-content: space-between;
     align-items: flex-start;
     width: 90%; /* Ajuste la largeur selon vos besoins */
-    position: relative;
+    padding: 20px;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 .info-box {
     background-color: #ffffff;
     border: 1px solid #dddddd;
     border-radius: 8px;
-    padding: 20px;
+    padding: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 30%; /* Largeur des colonnes */
     position: relative;
-    
 }
+
 
 .info-icon {
     width: 100px; /* Increase the size of the icon */
@@ -215,8 +229,8 @@
     position: relative;
     width: 100%;
     height: 100vh; /* Prend toute la hauteur de la vue */
-    min-height: 80vh; /* Assure une taille minimale */
-    overflow: hidden; /* Cache les parties de la vidéo qui débordent */
+    min-height: 100vh; /* Assure une taille minimale */
+    /*overflow: hidden; /* Cache les parties de la vidéo qui débordent */
 }
 
 
@@ -231,43 +245,41 @@
 }
 
 .overlay-text {
-    position: absolute;
+     /*position: absolute;
+    top: 88%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
+    color: #0a0a0a; /* Change la couleur en blanc pour un meilleur contraste */
+}
+
+.overlay-text, .overlay-text-2 {
+    position: absolute; /* Change la position absolue en relative pour être dans le flux de la mise en page */
     top: 88%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #0a0a0a; /* Change la couleur en blanc pour un meilleur contraste */
+    display: flex; /* Utilise flexbox pour aligner le texte */
+    flex-direction: column; /* Aligne le texte et le bouton verticalement */
+    align-items: center; /* Centre le contenu horizontalement */
+    justify-content: center; /* Centre le contenu verticalement */
+    text-align: center;
+    padding: 20px; /* Ajoute un padding pour les marges intérieures */
+    width: 100%; /* Prendre toute la largeur du conteneur parent */
     text-align: center;
     font-size: 10rem; /* Augmente la taille de la police */
     font-family: 'Poppins', sans-serif; /* Police arrondie et moderne */
     font-weight: 800; /* Rendre le texte encore plus gras */
     z-index: 1; /* Assure que le texte est au-dessus de la vidéo */
-    padding: 20px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Ajoute une ombre pour plus de lisibilité */
     letter-spacing: 2px; /* Espace légèrement les lettres */
     line-height: 1.2; /* Ajuste l'interligne pour un aspect plus compact */
 }
 
 .overlay-text-2 {
-    position: absolute;
+    /*position: absolute;
     top: 88%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
     color: #f6f3f3; /* Change la couleur en blanc pour un meilleur contraste */
-    text-align: center;
-    font-size: 10rem; /* Augmente la taille de la police */
-    font-family: 'Poppins', sans-serif; /* Police arrondie et moderne */
-    font-weight: 800; /* Rendre le texte encore plus gras */
-    z-index: 1; /* Assure que le texte est au-dessus de la vidéo */
-    padding: 20px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Ajoute une ombre pour plus de lisibilité */
-    letter-spacing: 2px; /* Espace légèrement les lettres */
-    line-height: 1.2; /* Ajuste l'interligne pour un aspect plus compact */
-}
-
-@media (max-width: 768px) {
-    .overlay-text {
-        font-size: 1.5rem; /* Ajustement de la taille de texte pour les petits écrans */
-    }
 }
 
 .learn-more-button-1 {
@@ -303,7 +315,58 @@
     text-decoration: none;
 }
 
+@media (max-width: 880px) {
+    .overlay-text h1, .overlay-text-2 h1 {
+        font-size: 2rem; /* Réduire la taille de la police sur mobile */
+        padding: 30px;
+        color: #0a0a0a;
+        margin-top: 10%;
+    }
 
+    .background-video {
+        height: auto; /* Laisse la vidéo ajuster sa hauteur naturellement */
+        object-fit: contain; /* La vidéo reste visible sans découpe */
+    }
+
+    .learn-more-button-1, .learn-more-button-2 {
+        background-color: #111111; /* Couleur de fond */
+        color: #ffffff; /* Couleur du texte */
+        border: none; /* Supprimer la bordure */
+        font-size: 20px; /* Taille de la police */
+        cursor: pointer; /* Afficher le curseur pointer */
+        border-radius: 10px; /* Ajouter une bordure arrondie */
+        text-decoration: none; /* Supprimer le soulignement par défaut */
+        font-size: 1.5rem; /* Réduire la taille du bouton sur mobile */
+        padding: 8px 12px; /* Réduire le padding pour que le bouton soit plus petit */
+        margin-top: 20px; /* Ajouter un espace au-dessus du bouton */
+    }
+    .learn-more-button-1:hover {
+        background-color: #f6f3f3; /* Couleur de fond au survol */
+        border-color: #0a0a0a;
+        color: #15033b;
+        text-decoration: none;
+    }
+    .learn-more-button-2:hover {
+        background-color: #f6f3f3; /* Couleur de fond au survol */
+        border-color: #0a0a0a;
+        color: #15033b;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .overlay-text h1, .overlay-text-2 h1 {
+        font-size: 2.2rem; /* Réduire la taille de la police sur mobile */
+
+    }
+
+
+    .learn-more-button-1, .learn-more-button-2 {
+        font-size: 1.5rem; /* Réduire la taille du bouton sur mobile */
+        padding: 8px 12px; /* Réduire le padding pour que le bouton soit plus petit */
+        margin-top: 20px; /* Ajouter un espace au-dessus du bouton */
+    }
+}
 
 
 .horizontal-line {
@@ -322,60 +385,6 @@
     font-weight: 400;
 }
 
-.Carousel {
-    width: 100%;
-}
-.carousel, .carousel-inner {
-    width: 100% !important;
-}
-
-
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-    width: 100%; /* Changer la largeur pour occuper toute la largeur disponible */
-    height: auto; /* Garder le ratio hauteur/largeur de l'image */
-    margin: auto; /* Centrer l'image horizontalement */
-}
-
-.carousel-caption h3 {
-    position: absolute;
-    top: -280%;
-    left: 50%;
-    font-size: 40px;
-    transform: translate(-50%, -50%);
-    text-align: center; /* Pour centrer le texte horizontalement */
-    color: white; /* Couleur du texte */
-    padding: 20px; /* Espacement intérieur */
-}
-
-.carousel-caption p {
-    position: absolute;
-    top: -120%;
-    left: 50%;
-    width: 150%;
-    font-size: 26px;
-    transform: translate(-50%, -50%);
-    text-align: center; /* Pour centrer le texte horizontalement */
-    padding: 20px; /* Espacement intérieur */
-}
-
-.carousel-indicators {
-    position: absolute;
-    bottom: 10px; /* Ajustez la distance du bas selon vos besoins */
-    left: 35%; /* Déplace les indicateurs vers le centre */
-    transform: translateX(-50%); /* Centre les indicateurs horizontalement */
-}
-
-
-@media (max-width: 1410px) {
-    .carousel-caption h3 {
-        font-size: 30px;
-    }
-    .carousel-caption p {
-        font-size: 20px;
-    }
-}
-
 @media (max-width: 1100px) {
     .home-text1 {
         font-size: 35px;
@@ -388,181 +397,24 @@
     }
 }
 
-/* -------------------- Support Section --------------------------*/
-.supportYou {
-    margin: 0;
-    font-family: 'Minerva Modern', sans-serif;
-    font-style: normal;
-    font-weight: 460;
-    font-size: 36px;
-    line-height: 43px;
-
-}
-
-.support-section {
-    display: flex;
-}
-
-.support-item {
-    flex: 1;
-    text-align: center;
-    display: inline-block;
-    vertical-align: top;
-    border-right: 4px solid #ccc; /* Ajoute une bordure à droite */
-    padding-right: 20px; /* Ajoute un espacement à droite */
-}
-
-.support-item:last-child {
-    border-right: none; /* Supprime la bordure à droite pour le dernier élément */
-}
-
-.support-item p {
-    width: 50%;
-    margin-left: 25%;
-    font-family: 'Minerva Modern', serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 43px;
-}
-
-.support-item img {
-    width: 70px; /* ajustez la taille selon vos besoins */
-    height: auto; /* garde le ratio d'aspect */
-}
-
-@media (max-width: 1200px) {
-
-    .support-section {
-        flex-direction: column; /* Affichez les éléments en colonne pour les écrans plus petits */
-    }
-
-    .support-item {
-        border-right: none; /* Supprimez la bordure à droite pour que chaque élément occupe la largeur totale */
-        padding-right: 0; /* Supprimez l'espacement à droite */
-        text-align: center; /* Centrez le contenu */
-        margin-bottom: 40px; /* Ajoutez un espacement entre les éléments */
-        border-top: 4px solid #ccc; /* Ajoute une bordure à droite */
-    }
-
-    .support-item p {
-        width: auto; /* Réinitialisez la largeur */
-        margin-left: 25%; /* Réinitialisez la marge */
-    }
-
-    .support-item img {
-        width: 80px; /* Ajustez la taille de l'image selon vos besoins */
-        height: auto; /* Gardez le ratio d'aspect */
-        margin-left: 5%; /* Réinitialisez la marge */
-    }
-}
 
 @media (max-width: 1000px) {
-    .support-item p {
-        width: 100%; /* Réinitialisez la largeur */
-        margin-left: 0; /* Réinitialisez la marge */
-    }
     .Home {
         margin-top: -20px;
     }
-}
-
-@media (max-width: 800px) {
-    .support-item p {
-        width: 100%; /* Réinitialisez la largeur */
-        margin-left: 0; /* Réinitialisez la marge */
-    }
-}
-
-.support-link {
-    font-family: 'minerva-modern', sans-serif;
-    font-style: normal;
-    font-size: 32px;
-    line-height: 43px; /* Hauteur de ligne 43px */
-    margin-bottom: 20px; /* Espacement en bas */
-}
-
-.learn-more-button {
-    background-color: #007bff; /* Couleur de fond */
-    color: #ffffff; /* Couleur du texte */
-    border: none; /* Supprimer la bordure */
-    padding: 10px 20px; /* Ajouter un espacement intérieur */
-    font-size: 16px; /* Taille de la police */
-    cursor: pointer; /* Afficher le curseur pointer */
-    border-radius: 10px; /* Ajouter une bordure arrondie */
-    text-decoration: none; /* Supprimer le soulignement par défaut */
-}
-.learn-more-button:hover {
-    background-color: #0056b3; /* Couleur de fond au survol */
-    color: #ffffff;
-    text-decoration: none;
 }
 
 .content {
     display: flex;
 }
 
-.image-container {
-    flex: 1;
-}
-
-.text-container {
-    flex: 3;
-    padding-left: 20px; /* Espacement entre l'image et le texte */
-    width: 10%;
-    max-width: 650px; /* Limiter la largeur maximale du texte à 400 pixels */
-    word-wrap: break-word;
-    margin-right: 250px;
-}
-
-.image-container img {
-    width: 650px; /* Ajustez la largeur de l'image selon vos besoins */
-    height: auto; /* Pour conserver les proportions de l'image */
-}
-
-.text-support {
-    text-align: left; /* Alignement du texte vers la gauche */
-    margin-top: 10px; /* Espacement en haut */
-    max-width: 950px; /* Limiter la largeur maximale du texte à 400 pixels */
-    word-wrap: break-word;
-    font-family: "freight-text-pro", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
-}
-
-@media (max-width: 1400px) {
-    .text-container {
-        margin-right: 10%;
-    }
-}
-
-@media (max-width: 1100px) {
-    .image-container img {
-        width: 250px; /* Ajustez la largeur de l'image selon vos besoins */
-        height: auto; /* Pour conserver les proportions de l'image */
-    }
-}
-@media (max-width: 950px) {
-    .image-container img {
-        display: none;
-    }
-    .text-container {
-        margin-right: 20%;
-    }
-    .text-support {
-        text-align: center;
-        margin: 0;
-    }
-}
 
 /* ---------- Trust Company -------*/
 
 .trust-text-span {
     color: #000000;
     font-family: "Inter-LightItalic", sans-serif;
-    font-size: 48px;
+    font-size: calc(2.5rem + 1vw);
     line-height: 130%;
     font-weight: 300;
 }
@@ -599,3 +451,61 @@
     transform: translateY(0);
 }
 
+
+
+/* Responsive media queries */
+@media (max-width: 1500px) {
+    .info-box p {
+        display: none;
+    }
+    
+    .info-box1, .info-box2, .info-box3 {
+        margin-top: 0px;
+        height: 100%;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .learn-more-button-0 {
+        margin-left: -50%;
+    }
+
+    .info-box {
+        width: 65%; /* Allow two boxes per row */
+        margin-left: 20%;
+        margin-bottom: 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-container, .first-section {
+        height: auto;
+    }
+
+    .learn-more-button-0 {
+        margin-left: 0;
+    }
+
+    .first-section .text-overlay h1 {
+        font-size: 4rem;
+        width: 100%;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .overlay-text, .learn-more-button-1, .learn-more-button-2 {
+        font-size: 1rem;
+    }
+
+    .first-section .text-overlay h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .info-box h2, .info-box p {
+        font-size: 1.2rem;
+    }
+}
