@@ -14,21 +14,21 @@ import DataAnalyst from '../DataAnalyst/DataAnalyst';
 function App() {
   return (
     <div className="App">
-      <Router>
-            <Routes>
-                <Route path="/" element={<Home/>} />
-                <Route path="/home" element={<Home/>} />
-                <Route path="/website" element={<Home/>} />
-                <Route path="/mbc" element={<Mbc/>} />
-                <Route path="/financial" element={<Finance/>} />
-                <Route path="/contact" element={<Contact/>} />
-                <Route path="/team" element={<Team/>} />
-                <Route path="/powerbi" element={<PowerBI/>} />
-                <Route path="/yetoo" element={<Yetoo/>} />
-                <Route path="/about" element={<About/>} />
-                <Route path="/dataanalyst" element={<DataAnalyst/>} />
-            </Routes>
-        </Router>
+      <Router basename="/tafili-consulting">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/website" element={<Home />} />
+          <Route path="/mbc" element={<Mbc />} />
+          <Route path="/financial" element={<Finance />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/powerbi" element={<PowerBI />} />
+          <Route path="/yetoo" element={<Yetoo />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/dataanalyst" element={<DataAnalyst />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
