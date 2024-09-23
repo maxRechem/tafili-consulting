@@ -15,6 +15,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <Router basename="/tafili-consulting">
             <Routes>
                 <Route path="/" element={<Home/>} />
                 <Route path="/home" element={<Home/>} />
@@ -28,6 +29,7 @@ function App() {
                 <Route path="/about" element={<About/>} />
                 <Route path="/dataanalyst" element={<DataAnalyst/>} />
             </Routes>
+          </Router>
         </Router>
     </div>
   );
