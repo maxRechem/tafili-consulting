@@ -13,8 +13,8 @@ import DataAnalyst from '../DataAnalyst/DataAnalyst';
 
 function App() {
   return (
-    <div className="App">
-      <Router basename="/tafili-consulting">
+    <Router basename="/tafili-consulting">
+      <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
@@ -27,9 +27,9 @@ function App() {
           <Route path="/yetoo" element={<Yetoo />} />
           <Route path="/about" element={<About />} />
           <Route path="/dataanalyst" element={<DataAnalyst />} />
-        </Routes>
-      </Router>
-    </div>
+          </Routes>
+      </div>
+    </Router>
   );
 }
 
