@@ -17,17 +17,15 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/website" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/mbc" element={<Mbc />} />
           <Route path="/financial" element={<Finance />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/team" element={<Team />} />
           <Route path="/powerbi" element={<PowerBI />} />
           <Route path="/yetoo" element={<Yetoo />} />
-          <Route path="/about" element={<About />} />
           <Route path="/dataanalyst" element={<DataAnalyst />} />
-          </Routes>
+        </Routes>
       </div>
     </Router>
   );

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Header.css';
 import logo from '../Img/TafiliLogo2.png';
+import { Link } from 'react-router-dom';
+
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,45 +49,45 @@ function Header() {
 
     return (
         <div className="Header">
-            <header className={`App-header ${isScrolled ? 'scrolled' : ''}`}>
-                {/* Navbar classique */}
-                {!isMobileView && (
-                    <nav className={`navbar ${isScrolled ? 'hide' : ''}`}>
-                        <ul className="navbar-menu">
-                            <li><a href="/about">About us</a></li>
-                            <li><a href="/financial">Financial</a></li>
-                            <li className="navbar-logo">
-                                <a href="/">
-                                    <img src={logo} alt="Logo"/>
-                                </a>
-                            </li>
-                            <li><a href="/dataanalyst">Data analyst & IT</a></li>
-                            <li><a href="/contact">Contact us</a></li>
-                        </ul>
-                    </nav>
-                )}
-
-                {/* Bouton Menu en Overlay */}
-                <div className={`menuIcon ${isScrolled || isMobileView ? '' : 'hide'} ${isMenuOpen ? 'toggle' : ''}`}
-                     onClick={handleMenuToggle}>
-                    <span className="icon icon-bars"></span>
-                    <span className="icon icon-bars overlay"></span>
-                </div>
-
-                {/* Menu Overlay */}
-                <div
-                    className="overlay-menu"
-                    style={{transform: isMenuOpen ? 'translateX(0%)' : 'translateX(-100%)'}}
-                >
-                    <ul id="menu">
-                        <li><a href="/yetoo">Yetoo</a></li>
-                        <li><a href="/powerbi">Power BI</a></li>
-                        <li><a href="/team">Meet Us</a></li>
-                        <li><a href="/contact">Contact us</a></li>
+        <header className={`App-header ${isScrolled ? 'scrolled' : ''}`}>
+            {/* Navbar classique */}
+            {!isMobileView && (
+                <nav className={`navbar ${isScrolled ? 'hide' : ''}`}>
+                    <ul className="navbar-menu">
+                        <li><Link to="/about">About us</Link></li>
+                        <li><Link to="/financial">Financial</Link></li>
+                        <li className="navbar-logo">
+                            <Link to="/">
+                                <img src={logo} alt="Logo" />
+                            </Link>
+                        </li>
+                        <li><Link to="/dataanalyst">Data analyst & IT</Link></li>
+                        <li><Link to="/contact">Contact us</Link></li>
                     </ul>
-                </div>
-            </header>
-        </div>
+                </nav>
+            )}
+
+            {/* Bouton Menu en Overlay */}
+            <div className={`menuIcon ${isScrolled || isMobileView ? '' : 'hide'} ${isMenuOpen ? 'toggle' : ''}`}
+                onClick={handleMenuToggle}>
+                <span className="icon icon-bars"></span>
+                <span className="icon icon-bars overlay"></span>
+            </div>
+
+            {/* Menu Overlay */}
+            <div
+                className="overlay-menu"
+                style={{ transform: isMenuOpen ? 'translateX(0%)' : 'translateX(-100%)' }}
+            >
+                <ul id="menu">
+                    <li><Link to="/yetoo">Yetoo</Link></li>
+                    <li><Link to="/powerbi">Power BI</Link></li>
+                    <li><Link to="/team">Meet Us</Link></li>
+                    <li><Link to="/contact">Contact us</Link></li>
+                </ul>
+            </div>
+        </header>
+    </div>
     );
 }
 
