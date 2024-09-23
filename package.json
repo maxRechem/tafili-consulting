@@ -1,8 +1,8 @@
 {
-  "homepage": "http://maxRechem.github.io/tafili-consulting",
   "name": "tafili-consulting",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://maxrechem.github.io/tafili-consulting",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
