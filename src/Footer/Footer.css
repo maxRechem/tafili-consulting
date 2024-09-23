@@ -1,0 +1,41 @@
+.footer-1 {
+    background-color: rgba(250, 250, 250, 1);
+    width: 100%; /* Modifier la largeur en pourcentage */
+    height: auto;
+    display: flex;
+    justify-content: space-between; /* Répartition égale entre les enfants */
+    align-items: center; /* Alignement vertical au centre */
+}
+
+.logo-footer {
+    width: 484px;
+    height: 265px;
+    border-radius: 32px;
+    background-image: url(../Img/LogoTofili.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 85px; /* Marge à gauche pour séparer du bord gauche */
+}
+
+.footer-part2 {
+    display: flex;
+    flex-direction: column; /* Alignement vertical des éléments */
+    align-items: flex-end; /* Alignement à droite */
+    margin-right: -70px; /* Marge à droite pour séparer du bord droit */
+}
+
+.contact-image {
+    width: 50%;
+    margin-right: 20%;
+}
+
+@media (max-width: 1220px) {
+    .logo-footer {
+       display: none;
+    }
+    .contact-image {
+        width: 50%;
+        margin-right: 50%;
+        margin-left: 50%;
+    }
+}

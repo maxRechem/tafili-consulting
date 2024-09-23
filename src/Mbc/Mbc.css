@@ -1,0 +1,256 @@
+.Mbc1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.content-wrapper {
+    color: white;
+    height: 150%;
+    display: grid;
+    grid-template-columns: auto 1fr; /* Première colonne de taille automatique, deuxième colonne occupant le reste de l'espace */
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%; /* Ajustez la largeur maximale selon vos besoins */
+    width: 100%;
+}
+.content-wrapper2 {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Première colonne de taille automatique, deuxième colonne occupant le reste de l'espace */
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%; /* Ajustez la largeur maximale selon vos besoins */
+    width: 100%;
+}
+
+.rectangle-gauche {
+    width: 700px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20%;
+    margin-top: -30%;
+}
+
+.mbc-title {
+    font-family: Inter, serif;
+    text-align: center;
+    font-size: 64px;
+    letter-spacing: 0;
+    margin-bottom: 20px; /* Espacement entre le titre et le paragraphe */
+}
+
+.mbc-intro {
+    font-family: Inter, serif;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 0;
+    margin-bottom: 20px; /* Espacement entre le paragraphe et la vidéo */
+}
+
+.video-container-mbc {
+    width: 100%;
+    height: auto;
+    background-color: #b30021;
+    padding-top: 10%;
+
+    background-image: url('../Img/fond-video.jpg');
+    /* background-size: cover;  Ajuster la taille de l'image pour couvrir tout le conteneur */
+    background-position: center; /* Centrer l'image horizontalement et verticalement */
+
+}
+
+.videoMBC {
+    margin-bottom: 10%;
+    width: 60%;
+    height: auto; /* Pour occuper exactement la même hauteur que le rectangle-gauche */
+    margin-left: 30%;
+    background: #333;
+    padding: 9px;
+    border: 12px outset #e0e0e0;
+    border-radius: 3%;
+}
+
+.mbc-text2 {
+    color:rgba(0, 0, 0, 1);
+    width:490px;
+    height:150px;
+    font-family: Kadwa, serif;
+    text-align:left;
+    font-size:48px;
+    letter-spacing:-2px;
+}
+
+.mbc-text3 {
+    color:rgba(0, 0, 0, 1);
+    width:535px;
+    height:224px;
+    font-family: Inter, serif;
+    text-align:left;
+    font-size:18px;
+}
+
+
+.part2-gauche {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.part2-droite {
+    height: 700px;
+    width: 1250px;
+    display: grid;
+    grid-template-columns: auto 1fr; /* Première colonne de taille automatique, deuxième colonne occupant le reste de l'espace */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.part2-title {
+    color: rgba(0, 0, 0, 1);
+    font-family: Geneva, Verdana, sans-serif;
+    text-align: left;
+    font-size: 64px;
+    letter-spacing: -1px;
+    margin-top: 120px;
+    margin-bottom: 20px;
+    margin-left: 30%;
+    line-height: 75px;
+}
+.part2-texte {
+    color:rgba(0, 0, 0, 1);
+    width:735px;
+    height:224px;
+    font-family: Inter, serif;
+    text-align:left;
+    font-size:18px;
+    margin-left: 28%;
+    margin-bottom: 20px;
+}
+.colonne_1 {
+    margin-left: 40%;
+}
+.colonne_2 {
+    margin-left: -10%;
+}
+.colonne_1, .colonne_2 {
+    flex: 1;
+    padding: 0 10px; /* Ajoutez une marge intérieure pour séparer les colonnes */
+}
+.colonne_1 img {
+    margin-top: 30px;
+    width: 125%; /* Ajustez la valeur selon vos besoins */
+}
+
+.colonne_2 img {
+    margin-top: 30px;
+    width: 45%;
+}
+
+
+@media (max-width: 1700px) {
+
+    .colonne_1 img {
+        width: 100%; /* Ajustez la valeur selon vos besoins */
+    }
+
+    .colonne_2 img {
+        width: 53%;
+    }
+    .colonne_2 {
+        margin-left: -30%;
+    }
+    .content-wrapper2 {
+        display: flex;
+    }
+
+    .part2-gauche {
+        width: 80%;
+        height: 500px;
+        margin-bottom: 0;
+        margin-left: -10%;
+    }
+
+    .part2-droite {
+        height: 500px;
+        width: 950px;
+    }
+    .part2-texte {
+        text-align: center; /* Aligner le texte à gauche pour la lisibilité */
+        max-width: 774px; /* Limitez la largeur maximale */
+    }
+    .part2-title {
+        text-align: center; /* Aligner le texte à gauche pour la lisibilité */
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 700px) {
+    .part2-droite {
+        grid-template-columns: 1fr; /* Une seule colonne */
+        margin-top: 15%;
+        margin-bottom: 140%;
+    }
+
+    .colonne_1, .colonne_2 {
+        max-width: 100%; /* Chaque colonne prendra la largeur complète */
+        margin-left: 0; /* Supprimez la marge à gauche */
+    }
+    .colonne_1 img {
+        width: 40%; /* Ajustez la valeur selon vos besoins */
+    }
+
+    .colonne_2 img {
+        width: 40%;
+    }
+}
+.mbc_title3 {
+    color:rgba(0, 0, 0, 1);
+    width:874px;
+    height:105px;
+    font-family:Kadwa, Verdana, sans-serif;
+    text-align:left;
+    font-size:48px;
+    letter-spacing:-2px;
+}
+.mbc_texte3 {
+    color: rgba(131.00000739097595, 134.00000721216202, 150.0000062584877, 1);
+    font-family: Sofia Pro, serif;
+    text-align: center;
+    font-size: 18px; /* Ajustez la taille de la police */
+    letter-spacing: 2px;
+    word-wrap: break-word; /* Permet le passage à la ligne si nécessaire */
+}
+.mbc_texte3_div {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 90%; /* Ajustez la largeur selon vos besoins */
+    max-width: 774px; /* Limitez la largeur maximale */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mbc_part3 img {
+    width: 50%;
+}
+
+
+@media (max-width: 950px) {
+    .mbc_part3 img {
+        width: 80%;
+    }
+}
+@media (max-width: 500px) {
+    .mbc_part3 img {
+        width: 90%;
+    }
+}

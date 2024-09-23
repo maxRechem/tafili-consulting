@@ -1,0 +1,267 @@
+.contact {
+	background: #dfdfdf;
+}
+
+.contactPart1 {
+	position: relative;
+    background-color:rgba(50.79479277133942, 74.60208848118782, 159.00974839925766, 1);
+    width:auto;
+    height:478px;
+}
+.contactPart2 {
+	position: relative;
+	background: #dfdfdf;
+	width:auto;
+	height:500px;
+	z-index: 0;
+}
+.touch { 
+	color:rgba(255, 255, 255, 1);
+	width:402px;
+	height:66px;
+	font-family: Sofia Pro, serif;
+	text-align:left;
+	font-size:64px;
+	letter-spacing:5px;
+	line-height:66px;
+	position: absolute;
+	left: 150px; /* Ajustement de la position horizontale */
+	bottom: 200px; /* Ajustement de la position verticale */
+}
+
+.contact_text { 
+	color:rgba(236.00000113248825, 236.00000113248825, 254.00000005960464, 1);
+	width:448px;
+	height:33px;
+	font-family: Sofia Pro, serif;
+	text-align:left;
+	font-size:20px;
+	letter-spacing:2px;
+	line-height:33px;
+	position: absolute;
+	left: 150px; /* Ajustement de la position horizontale */
+	bottom: 160px; /* Ajustement de la position verticale */
+}
+
+.contact_cadre {
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* Centrer horizontalement le contenu */
+	box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.05000000074505806);
+	background-color: rgba(255, 255, 255, 1);
+	width: 640px;
+	height: 650px;
+	border-radius: 24px;
+	position: absolute;
+	top: calc(30% - 100px); /* La moitié de la hauteur */
+	right: 10%;
+	transform: translateX(-50%);
+	z-index: 4;
+}
+
+.contact_cadre span {
+	font-family: Sofia Pro, serif;
+	text-align: left;
+	font-size: 16px;
+	line-height: 54px; /* Ajustement pour aligner verticalement avec les inputs */
+	width: 300%;
+	margin-left: auto; /* Aligner à droite */
+	margin-right: auto; /* Aligner à gauche */
+	margin-bottom: auto; /* Ajouter un espace entre les champs */
+}
+.contact_cadre input {
+	width: 150%; /* Pour occuper tout l'espace disponible */
+	height: 35px;
+	background-color: rgba(244, 245, 246, 1);
+	border-radius: 12px;
+	border: none;
+	padding: 8px; /* Ajustement du padding pour les inputs */
+
+	margin-left: -20%; /* Aligner à droite */
+	margin-right: auto; /* Aligner à gauche */
+	margin-bottom: auto; /* Ajouter un espace entre les champs */
+}
+
+.name_input,.email_input,.company_input,.phone_input,.subject_input {
+	background-color:rgba(244.0000006556511, 245.00000059604645, 246.0000005364418, 1);
+
+}
+.message_input {
+	height: 480px;
+}
+
+.contact_name,.contact_email,.contact_company,.contact_phone,.contact_subject,.contact_message { 
+	color:rgba(92.00000211596489, 95.00000193715096, 110.00000104308128, 1);
+	width:78px;
+	height:24px;
+	font-family: Sofia Pro, serif;
+	text-align:left;
+	font-size:16px;
+	letter-spacing:2px;
+	line-height:33px;
+}
+
+
+.buttonSend {
+	width: 110px;
+	background: rgba(101, 31, 255, 1);
+	color: rgba(255, 255, 255, 1);
+	border-radius: 30px;
+	font-size: 20px;
+	cursor: pointer; /* Ajout du curseur pointer */
+	transition: background-color 0.3s ease; /* Animation de transition pour la couleur de fond */
+	margin-top: auto; /* Aligner le bouton en bas */
+	margin-left: auto; /* Aligner le bouton à droite */
+	margin-right: auto; /* Aligner le bouton à gauche */
+}
+
+.buttonSend:hover {
+	background-color: rgb(49, 6, 141); /* Changement de couleur de fond au survol */
+}
+
+.buttonSend:active {
+	background-color: rgba(80, 10, 220, 1); /* Changement de couleur de fond lors du clic */
+}
+
+
+
+
+@media (max-width: 1400px) {
+	.contact_cadre {
+		top: calc(50% - -350px); /* La moitié de la hauteur */
+		position: absolute;
+		left: 50%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%);
+	}
+	.touch {
+		position: absolute;
+		top: 20%;
+		left: 50%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%);
+		z-index: 5;
+	}
+
+	.contact_text {
+		position: absolute;
+		top: 30%;
+		left: 50%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%);
+		z-index: 5;
+	}
+}
+
+
+@media (max-width: 1000px) {
+	.contactPart1 {
+		position: relative;
+		height:578px;
+	}
+}
+
+
+@media (max-width: 665px) {
+	.contact_cadre {
+		position: absolute;
+
+		bottom: -500px; /* Ajustez cette valeur selon vos besoins */
+		left: 50%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%);
+		width: 80%; /* Utilisation d'une unité relative */
+		max-width: 640px; /* Taille maximale */
+		height: 80%; /* Pour maintenir le ratio hauteur/largeur */
+		padding: 20px; /* Ajout de padding pour l'espace intérieur */
+		box-sizing: border-box; /* Inclure le padding dans la largeur */
+	}
+	.touch {
+		font-size: 9vw;
+	}
+
+	.contact_text {
+		font-size: 3vw;
+	}
+
+}
+@media (max-width: 500px) {
+	.contact_cadre {
+		position: absolute;
+		bottom: -500px; /* Ajustez cette valeur selon vos besoins */
+		left: 50%;
+		margin-top: 10%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%);
+		width: 80%; /* Utilisation d'une unité relative */
+		max-width: 640px; /* Taille maximale */
+		height: 100%; /* Pour maintenir le ratio hauteur/largeur */
+		padding: 1px; /* Ajout de padding pour l'espace intérieur */
+		box-sizing: border-box; /* Inclure le padding dans la largeur */
+	}
+	.contact_cadre input {
+		width: 100%; /* Pour occuper tout l'espace disponible */
+		height: 35px;
+
+		margin-left: 0%; /* Aligner à droite */
+	}
+	.touch {
+		left: 60%;
+	}
+	.contact_text {
+		left: 60%;
+	}
+}
+@media (max-width: 630px) {
+	.touch {
+		left: 65%;
+	}
+
+	.contact_text {
+		left: 65%;
+	}
+}
+
+@media (max-width: 430px) {
+	.touch {
+		left: 70%;
+	}
+
+	.contact_text {
+		left: 70%;
+	}
+}
+@media (max-width: 360px) {
+	.touch {
+		left: 75%;
+	}
+	.contact_text {
+		left: 75%;
+	}
+}
+@media (max-width: 360px) {
+	.touch {
+		left: 80%;
+	}
+	.contact_text {
+		left: 80%;
+	}
+}
+@media (max-width: 290px) {
+	.contact_cadre {
+		width: 90%; /* Utilisation d'une unité relative */
+	}
+	.touch {
+		left: 85%;
+	}
+	.contact_text {
+		left: 90%;
+	}
+}
+
+
+@media (max-width: 233px) {
+	.contact_cadre {
+		width: 100%; /* Utilisation d'une unité relative */
+	}
+}

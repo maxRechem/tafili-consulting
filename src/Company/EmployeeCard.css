@@ -1,0 +1,59 @@
+.team-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+   /* background-color: #f5f5f5; Optionnel: pour un fond léger */
+    padding: 20px; /* Ajoute un peu de padding autour du contenu */
+}
+
+.employee-card {
+    border: 1px solid #ccc;
+    padding: 30px; /* Augmentez le padding pour plus d'espace à l'intérieur des cartes */
+    margin: 30px 0; /* Augmentez l'espacement entre les cartes */
+    border-radius: 8px;
+    text-align: center;
+    max-width: 500px; /* Augmentez la largeur maximale des cartes */
+    background-color: #ffffff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Renforce l'effet de profondeur */
+}
+
+.employee-image {
+    width: 200px; /* Augmentez la taille de l'image */
+    height: 200px; /* Augmentez la taille de l'image */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px; /* Augmentez l'espacement sous l'image */
+}
+
+h2 {
+    font-size: 2rem; /* Augmentez la taille de la police pour le nom */
+    margin-bottom: 10px; /* Ajoutez un petit espacement sous le nom */
+}
+
+h4 {
+    font-size: 1.5rem; /* Augmentez la taille de la police pour le titre */
+    margin-bottom: 15px; /* Augmentez l'espacement sous le titre */
+}
+
+p {
+    font-size: 1.2rem; /* Augmentez la taille de la police pour la description */
+    margin-bottom: 20px; /* Augmentez l'espacement sous la description */
+}
+
+.employee-links {
+    margin-top: 20px;
+}
+
+.employee-links a {
+    margin: 0 15px; /* Augmentez l'espacement entre les liens */
+    font-size: 1.2rem; /* Augmentez la taille de la police pour les liens */
+    text-decoration: none;
+    color: #0077b5; /* Couleur pour LinkedIn */
+    font-weight: bold;
+}
+
+.employee-links a:hover {
+    text-decoration: underline;
+}

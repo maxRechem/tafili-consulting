@@ -1,0 +1,116 @@
+/* General page styles */
+.yetoo-page {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Initial state for features: invisible and slightly off position */
+.feature {
+    opacity: 0;
+    transform: translateY(40px); /* Start with a larger offset for more noticeable effect */
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* Longer transition duration */
+}
+
+/* Fade-in effect when feature is in view */
+.feature.fade-in {
+    opacity: 1;
+    transform: translateY(0); /* Reset translation to original position */
+}
+
+/* Header Section */
+.yetoo-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: rgba(155, 8, 24, 0.76);
+    color: white;
+    text-align: center;
+}
+
+.yetoo-logo {
+    max-width: 150px;
+    margin-right: 20px;
+}
+
+.header-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.header-text p {
+    font-size: 1.5rem;
+    max-width: 600px;
+}
+
+/* Section Divider */
+.section-divider {
+    border: 0;
+    height: 2px;
+    background: #ddd;
+    margin: 40px 0;
+}
+
+/* Features Section */
+.features-section-yetoo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+}
+
+.feature {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+}
+
+.feature-image {
+    max-width: 40%;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-text {
+    flex: 1;
+}
+
+.feature-text h2 {
+    font-size: 2rem;
+    color:  rgb(155, 8, 24);
+    margin-bottom: 10px;
+}
+
+.feature-text p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Conclusion Section */
+.yetoo-conclusion {
+    text-align: center;
+    padding: 40px;
+    background-color: rgba(155, 8, 24, 0.76);
+    color: white;
+}
+
+.yetoo-conclusion h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.yetoo-conclusion p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}

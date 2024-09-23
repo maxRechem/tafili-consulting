@@ -1,0 +1,175 @@
+/* Global settings for the page */
+.powerbi-page {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* First section for the title */
+.title-section {
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 40px;
+    background-image: url('../Img/powerBIbackgroundBig.png'); /* Your background image */
+    background-size: cover; /* Ensure the image covers more space and can stretch */
+    background-position: right center; /* Keep the image anchored to the right */
+    background-repeat: no-repeat; /* Prevent repeating the background image */
+    height: 500px; /* Adjust the height as needed */
+    position: relative;
+    width: 100%; /* Ensure the section spans the entire width of the screen */
+}
+
+.title-text {
+    flex: 1;
+    max-width: 40%;
+    padding-left: 40px; /* Keep the title slightly offset from the left */
+    z-index: 1; /* Ensure the text stays on top of the background */
+    color: #333; /* Restore original text color */
+}
+
+.powerbi-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #0078d4; /* Original blue color */
+    margin-bottom: 20px;
+    text-align: left;
+    text-shadow: none; /* Remove text shadow for clarity */
+}
+
+.powerbi-subtitle {
+    font-size: 1.8rem;
+    color: #555; /* Original subtitle color */
+    text-align: left;
+    font-style: italic;
+    text-shadow: none; /* Remove text shadow */
+}
+
+/* Separator line */
+.section-divider {
+    border: 0;
+    height: 2px;
+    background: #0078d4;
+    margin: 40px 0;
+}
+
+/* Second section for the features list and image */
+.features-section-bi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center content vertically */
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.features-list {
+    flex: 1;
+    padding-right: 20px;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the list content */
+}
+
+.features-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.features-list li {
+    font-size: 2rem; /* Larger, more prominent font size */
+    line-height: 1.6; /* Adjust line height for better readability */
+    margin-bottom: 20px;
+    color: #00294a;
+    font-family: 'Roboto', sans-serif; /* Modern, clean font style */
+    font-weight: bold; /* Make the text bold */
+    letter-spacing: 0.5px; /* Add subtle spacing between letters */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for more depth */
+    position: relative;
+    padding-left: 40px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.features-list li:last-child {
+    border-bottom: none;
+}
+
+.features-list li:hover {
+    color: #ebb818; /* Change text color on hover */
+    transition: color 0.3s ease;
+}
+
+/* Large image beside the list */
+.features-image {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.features-image img {
+    max-width: 95%; /* Large image size */
+    height: auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.details-section {
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+.details-title {
+    font-size: 2.5rem; /* Increased font size for better readability */
+    font-weight: bold; /* Make the title stand out */
+    margin-bottom: 30px;
+    text-align: center;
+    color: #00294a; /* Use the same blue color for consistency */
+    letter-spacing: 0.5px; /* Add slight letter spacing for clarity */
+    text-transform: uppercase; /* Make the title uppercase for emphasis */
+}
+
+.details-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.detail-item {
+    width: 30%;
+    background-color: white;
+    padding: 30px; /* Increased padding for better spacing */
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.detail-item h3 {
+    font-size: 1.8rem; /* Increased font size for better readability */
+    font-weight: bold;
+    color: #0078d4; /* Keep consistent with the title color */
+    margin-bottom: 15px;
+    text-transform: uppercase; /* Make the subtitles uppercase */
+    letter-spacing: 0.5px; /* Slight letter spacing for better clarity */
+}
+
+.detail-item p {
+    font-size: 1.3rem; /* Increased font size for better readability */
+    color: #555; /* Darker gray for better contrast */
+    line-height: 1.6; /* Increased line height for better readability */
+}
+
+/* Add hover effect for detail-item for a stylish effect */
+.detail-item:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Enhance shadow on hover */
+}

@@ -1,0 +1,36 @@
+/* Conteneur principal avec Flexbox pour les deux colonnes */
+.about-and-team-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 80%;
+    margin: auto;
+  }
+  
+  /* Colonne pour la partie "About" */
+  .about-column {
+    flex: 1; /* Laisser cette colonne prendre autant d'espace que nécessaire */
+    padding: 20px;
+    margin-right: 20px;
+    border-right: 2px solid #ddd; /* Séparer visuellement les colonnes */
+  }
+  
+  /* Colonne pour la partie "Team" */
+  .team-column {
+    flex: 1; /* Laisser cette colonne prendre autant d'espace que nécessaire */
+    padding: 20px;
+  }
+  
+  /* Responsivité pour les petits écrans */
+  @media (max-width: 768px) {
+    .about-and-team-container {
+      flex-direction: column;
+    }
+  
+    .about-column, .team-column {
+      margin-right: 0;
+      border-right: none;
+      margin-bottom: 20px;
+    }
+  }
+  

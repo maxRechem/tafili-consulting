@@ -1,0 +1,286 @@
+.App-header {
+    position: fixed; /* Place le header en haut de la page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*  background: transparent; */
+    z-index: 10; /* Assure que le header soit au-dessus de la vidéo */
+    padding: 10px 20px; /* Ajuste le padding pour le contenu */
+    transition: background 0.3s ease-in-out; /* Optionnel: ajout d'une animation pour le changement de fond */
+}
+
+/*
+.App-header.scrolled {
+    background: rgba(0, 0, 0, 0.7);
+}
+*/
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Assure que les éléments de la navbar sont alignés verticalement */
+    background: rgba(255, 255, 255);
+    padding: 10px 20px;
+    transition: opacity 0.3s ease-in-out;
+    position: relative; /* Permet au logo d'être positionné absolument */
+    overflow: hidden; /* Assure que tout débordement du logo est caché */
+    height: 100%;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.navbar-menu li {
+    position: relative; /* Permet de positionner le séparateur à l'intérieur de chaque élément */
+}
+
+.navbar-menu li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 0.8em;
+    padding: 0 15px;
+    transition: color 0.3s;
+    position: relative; /* Permet d'utiliser le ::after sur le lien */
+    font-family: 'Apperel', sans-serif;
+}
+
+/* Effet de ligne colorée sous chaque lien */
+.navbar-menu li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px; /* Positionne la ligne juste en dessous du texte */
+    width: 0;
+    height: 3px; /* Épaisseur de la ligne */
+    background-color: transparent; /* Par défaut, invisible */
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+@font-face {
+    font-family: 'Apperel';
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Couleurs différentes pour chaque lien */
+.navbar-menu li:nth-child(1) a:hover::after {
+    background-color: rgb(28, 121, 184); /* Couleur du premier lien */
+    width: 100%;
+}
+
+.navbar-menu li:nth-child(2) a:hover::after {
+    background-color: rgb(184, 71, 28); /* Couleur du deuxième lien */
+    width: 100%;
+}
+
+/*
+.navbar-menu li:nth-child(3) a:hover::after {
+    background-color: rgb(71, 184, 28);
+    width: 100%;
+}
+*/
+
+.navbar-menu li:nth-child(4) a:hover::after {
+    background-color: rgb(71, 184, 28); /* Couleur du quatrième lien */
+    width: 100%;
+}
+
+.navbar-menu li:nth-child(5) a:hover::after {
+    background-color: rgb(255, 211, 73); /* Couleur du cinquième lien */
+    width: 100%;
+}
+
+/* Séparateur vertical
+.navbar-menu li::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 2px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translateY(-50%);
+}
+*/
+
+/* Styles pour le logo */
+.navbar-logo {
+    margin: 0 20px; /* Espacement autour du logo */
+}
+
+.navbar-logo img {
+    height: 110px; /* Ajustez la taille du logo selon vos préférences */
+    width: auto;
+    object-fit: contain;
+}
+
+/* Cacher la navbar quand on scrolle */
+.navbar.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* Bouton Menu Icon */
+.menuIcon {
+    cursor: pointer;
+    display: block;
+    position: fixed;
+    right: 60px;
+    top: 40px;
+    height: 23px;
+    width: 27px;
+    z-index: 12;
+    transition: opacity 0.3s;
+}
+/* Cacher le menu burger au chargement */
+.menuIcon.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Icon Bars */
+.icon-bars {
+    background: rgb(255, 202, 49);
+    position: absolute;
+    left: 1px;
+    top: 45%;
+    height: 4px;
+    width: 40px;
+    transition: 0.4s;
+}
+
+.icon-bars::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -8px;
+    height: 4px;
+    width: 40px;
+    background: rgb(13, 26, 38);
+    transition: 0.3s width 0.4s;
+}
+
+.icon-bars::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    height: 4px;
+    width: 40px;
+    background: rgb(243, 6, 6);
+    transition: 0.3s width 0.4s;
+}
+
+/* Toggle Menu Icon */
+.menuIcon.toggle .icon-bars {
+    top: 5px;
+    transform: translate3d(0, 5px, 0) rotate(135deg);
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.menuIcon.toggle .icon-bars::before {
+    top: 0;
+    opacity: 0;
+}
+
+.menuIcon.toggle .icon-bars::after {
+    top: 10px;
+    transform: translate3d(0, -10px, 0) rotate(-270deg);
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Overlay Menu */
+/* Overlay Menu */
+.overlay-menu {
+    background: darkgray;
+    display: flex;
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+    transform: translateX(-100%);
+    width: 100vw;
+    height: 200vh; /* Ajuste à la hauteur de la fenêtre */
+    transition: transform 0.2s ease-out;
+    z-index: 8;
+    overflow: hidden;
+    position: fixed;
+}
+
+.overlay-menu ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Garde les liens en colonne */
+    justify-content: center; /* Centre verticalement les liens */
+    align-items: center; /* Centre horizontalement les liens */
+    gap: 20px; /* Ajout d'espace entre les éléments pour mieux les répartir */
+}
+
+.overlay-menu li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.overlay-menu li a {
+    display: block;
+    font-size: 1.8em;
+    letter-spacing: 4px;
+    padding: 10px 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+}
+
+.overlay-menu li a:hover,
+.overlay-menu li a:active {
+    color: rgb(28, 121, 184);
+    transition: color 0.3s ease;
+}
+
+/* Ajustement pour écrans larges */
+@media (min-width: 100px) {
+    .overlay-menu ul {
+        padding-top: 700px; /* Ajoute un espace en haut pour que les liens soient visibles */
+        padding-bottom: 50px; /* Ajoute un espace en bas pour éviter que les liens ne touchent le bas de l'écran */
+        height: auto; /* Ajuste la hauteur pour une meilleure visualisation */
+    }
+}
+
+
+/* Ajustement pour écrans très larges */
+@media (min-width: 1200px) {
+    .overlay-menu ul {
+        padding-top: 800px; /* Plus d'espace en haut sur les écrans très larges */
+        padding-bottom: 100px; /* Plus d'espace en bas */
+    }
+}
+
+/* Ajustement pour écrans très larges */
+@media (min-width: 1800px) {
+    .overlay-menu ul {
+        padding-top: 900px; /* Plus d'espace en haut sur les écrans très larges */
+        padding-bottom: 100px; /* Plus d'espace en bas */
+    }
+}
+
+/* Style pour les écrans en dessous de 1300px */
+@media (max-width: 1300px) {
+    /* Cacher la navbar classique */
+    .navbar {
+        display: none;
+    }
+
+    /* Afficher le bouton de menu burger */
+    .menuIcon {
+        display: block;
+        opacity: 1; /* Le rendre visible */
+        pointer-events: all; /* Activer les clics */
+    }
+}

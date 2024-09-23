@@ -1,0 +1,601 @@
+.Home {
+    margin-top: -7%;
+    min-height: 100vh; /* La hauteur du conteneur prend toute la hauteur de la vue */
+    overflow: visible;
+}
+
+
+/* Style pour la vidéo d'intro en plein écran */
+.intro-video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s ease; /* Transition de fondu */
+}
+
+.intro-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Animation de fondu pour masquer la vidéo */
+.fade-out {
+    opacity: 0;
+    pointer-events: none; /* Empêche l'interaction pendant le fondu */
+}
+
+/* Style pour la première section avec une image de fond */
+.section-image {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Assure-toi que ce style s'applique à ta première section */
+.first-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ajuste en fonction de ta mise en page */
+    background-image: url('../Img/teamfond.jpg'); /* Chemin vers ton image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Centre le texte */
+    animation: fadeIn 2s forwards; /* Animation de fondu */
+    overflow: hidden;
+
+}
+
+/* Overlay sombre */
+.first-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Ajuste l'opacité (0.5 = 50%) et la couleur (noir ici) */
+    z-index: 1; /* S'assure que l'overlay est au-dessus de l'image */
+}
+
+/* Texte par-dessus l'image et l'overlay */
+.first-section .text-overlay {
+    position: relative;
+    z-index: 2; /* Assure que le texte est au-dessus de l'overlay */
+    color: #ffffff; /* Couleur du texte en blanc pour un meilleur contraste */
+    text-align: center;
+    font-size: 2rem; /* Ajuste la taille du texte selon tes besoins */
+    padding: 20px; /* Ajoute un peu d'espace autour du texte */
+}
+.text-overlay h1 {
+    color: #ffffff; /* Couleur du texte en blanc pour un meilleur contraste */
+    font-size: 10rem; /* Ajuste la taille du texte selon tes besoins */
+    padding: 40px; /* Ajoute un peu d'espace autour du texte */
+    text-align: left;
+    margin-left: 10%;
+    width: 60%;
+    font-family: 'Baskerville', 'Times New Roman', Times, serif;
+}
+/* Style du bouton "READ MORE" */
+.learn-more-button-0 {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none !important;
+    font-size: 28px;
+    padding: 8px 16px;
+    position: relative;
+    transition: color 0.3s ease;
+    margin-left: -69%;
+    cursor: pointer;
+}
+
+/* Style au survol : soulignement avec une ligne blanche */
+.learn-more-button-0::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.learn-more-button-0:hover {
+    color: #fff; /* Assure que le texte reste blanc */
+}
+
+/* Animation au survol pour faire apparaître la ligne */
+.learn-more-button-0:hover::after {
+    width: 100%;
+}
+
+/* Animation pour le fondu */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+/* Styles pour la deuxième section */
+.second-section {
+    background-color: #f4f4f4; /* Couleur de fond pour la section */
+    padding: 50px 0; /* Espacement autour de la section */
+    height: 80vh; /* Hauteur de la section (80% de la hauteur de la fenêtre) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-section-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%; /* Ajuste la largeur selon vos besoins */
+    position: relative;
+    margin: 0 auto;
+}
+
+.info-box {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%; /* Largeur des colonnes */
+    position: relative;
+    
+}
+
+.info-icon {
+    width: 100px; /* Increase the size of the icon */
+    height: auto;
+    margin-bottom: 20px; /* Add some more spacing between the icon and the heading */
+    margin-left: 0%; /* Moves the icon slightly to the left */
+}
+
+.info-box1 {
+    margin-top: -50px; /* Positionne la première boîte sans décalage vertical */
+}
+
+.info-box2 {
+    margin-top: 50px; /* Décale la deuxième boîte vers le bas */
+}
+
+.info-box3 {
+    margin-top: 150px; /* Décale la troisième boîte encore plus bas */
+}
+
+.info-box h2 {
+    font-size: 4em; /* Taille du texte des titres */
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    font-size: 2.4em; /* Taille du texte des paragraphes */
+    margin-bottom: 20px;
+}
+
+.learn-more-link {
+    font-size: 2em;
+    color: #000000; /* Couleur du texte du lien */
+    text-decoration: none; /* Supprime le soulignement */
+    font-weight: bold;
+}
+
+.learn-more-link:hover {
+    text-decoration: none;
+    border-bottom: 2px solid white; /* Ligne blanche sous le texte au survol */
+}
+
+
+.video-container {
+    margin-top: 0px;
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Prend toute la hauteur de la vue */
+    min-height: 80vh; /* Assure une taille minimale */
+    overflow: hidden; /* Cache les parties de la vidéo qui débordent */
+}
+
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw; /* La vidéo prend toute la largeur de la fenêtre */
+    height: 100vh; /* La vidéo prend toute la hauteur de la fenêtre */
+    object-fit: cover; /* Assure que la vidéo couvre tout l'espace sans déformation */
+    transform: translate(-50%, -50%); /* Centre la vidéo au milieu de l'écran */
+}
+
+.overlay-text {
+    position: absolute;
+    top: 88%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #0a0a0a; /* Change la couleur en blanc pour un meilleur contraste */
+    text-align: center;
+    font-size: 10rem; /* Augmente la taille de la police */
+    font-family: 'Poppins', sans-serif; /* Police arrondie et moderne */
+    font-weight: 800; /* Rendre le texte encore plus gras */
+    z-index: 1; /* Assure que le texte est au-dessus de la vidéo */
+    padding: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Ajoute une ombre pour plus de lisibilité */
+    letter-spacing: 2px; /* Espace légèrement les lettres */
+    line-height: 1.2; /* Ajuste l'interligne pour un aspect plus compact */
+}
+
+.overlay-text-2 {
+    position: absolute;
+    top: 88%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f6f3f3; /* Change la couleur en blanc pour un meilleur contraste */
+    text-align: center;
+    font-size: 10rem; /* Augmente la taille de la police */
+    font-family: 'Poppins', sans-serif; /* Police arrondie et moderne */
+    font-weight: 800; /* Rendre le texte encore plus gras */
+    z-index: 1; /* Assure que le texte est au-dessus de la vidéo */
+    padding: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Ajoute une ombre pour plus de lisibilité */
+    letter-spacing: 2px; /* Espace légèrement les lettres */
+    line-height: 1.2; /* Ajuste l'interligne pour un aspect plus compact */
+}
+
+@media (max-width: 768px) {
+    .overlay-text {
+        font-size: 1.5rem; /* Ajustement de la taille de texte pour les petits écrans */
+    }
+}
+
+.learn-more-button-1 {
+    background-color: #111111; /* Couleur de fond */
+    color: #ffffff; /* Couleur du texte */
+    border: none; /* Supprimer la bordure */
+    padding: 10px 20px; /* Ajouter un espacement intérieur */
+    font-size: 20px; /* Taille de la police */
+    cursor: pointer; /* Afficher le curseur pointer */
+    border-radius: 10px; /* Ajouter une bordure arrondie */
+    text-decoration: none; /* Supprimer le soulignement par défaut */
+}
+.learn-more-button-1:hover {
+    background-color: #f6f3f3; /* Couleur de fond au survol */
+    border-color: #0a0a0a;
+    color: #15033b;
+    text-decoration: none;
+}
+.learn-more-button-2 {
+    background-color: #f6f3f3; /* Couleur de fond */
+    color: #15033b; /* Couleur du texte */
+    border: none; /* Supprimer la bordure */
+    padding: 10px 20px; /* Ajouter un espacement intérieur */
+    font-size: 20px; /* Taille de la police */
+    cursor: pointer; /* Afficher le curseur pointer */
+    border-radius: 10px; /* Ajouter une bordure arrondie */
+    text-decoration: none; /* Supprimer le soulignement par défaut */
+}
+.learn-more-button-2:hover {
+    background-color: #111111; /* Couleur de fond au survol */
+    border-color: #f6f3f3;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+
+
+.horizontal-line {
+    width: 90%; /* Ajustez la largeur selon vos besoins */
+    height: 2px;
+    background-image: linear-gradient(to right, transparent, #000, transparent);
+    border: none;
+    margin: 0 auto; /* Centrer horizontalement */
+}
+
+.home-text1 {
+    margin-left: 30%;
+    font-size: 45px;
+    width: 40%;
+    font-family: 'Minerva Modern', sans-serif;
+    font-weight: 400;
+}
+
+.Carousel {
+    width: 100%;
+}
+.carousel, .carousel-inner {
+    width: 100% !important;
+}
+
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 100%; /* Changer la largeur pour occuper toute la largeur disponible */
+    height: auto; /* Garder le ratio hauteur/largeur de l'image */
+    margin: auto; /* Centrer l'image horizontalement */
+}
+
+.carousel-caption h3 {
+    position: absolute;
+    top: -280%;
+    left: 50%;
+    font-size: 40px;
+    transform: translate(-50%, -50%);
+    text-align: center; /* Pour centrer le texte horizontalement */
+    color: white; /* Couleur du texte */
+    padding: 20px; /* Espacement intérieur */
+}
+
+.carousel-caption p {
+    position: absolute;
+    top: -120%;
+    left: 50%;
+    width: 150%;
+    font-size: 26px;
+    transform: translate(-50%, -50%);
+    text-align: center; /* Pour centrer le texte horizontalement */
+    padding: 20px; /* Espacement intérieur */
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px; /* Ajustez la distance du bas selon vos besoins */
+    left: 35%; /* Déplace les indicateurs vers le centre */
+    transform: translateX(-50%); /* Centre les indicateurs horizontalement */
+}
+
+
+@media (max-width: 1410px) {
+    .carousel-caption h3 {
+        font-size: 30px;
+    }
+    .carousel-caption p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .home-text1 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 850px) {
+    .home-text1 {
+        font-size: 25px;
+    }
+}
+
+/* -------------------- Support Section --------------------------*/
+.supportYou {
+    margin: 0;
+    font-family: 'Minerva Modern', sans-serif;
+    font-style: normal;
+    font-weight: 460;
+    font-size: 36px;
+    line-height: 43px;
+
+}
+
+.support-section {
+    display: flex;
+}
+
+.support-item {
+    flex: 1;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    border-right: 4px solid #ccc; /* Ajoute une bordure à droite */
+    padding-right: 20px; /* Ajoute un espacement à droite */
+}
+
+.support-item:last-child {
+    border-right: none; /* Supprime la bordure à droite pour le dernier élément */
+}
+
+.support-item p {
+    width: 50%;
+    margin-left: 25%;
+    font-family: 'Minerva Modern', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 43px;
+}
+
+.support-item img {
+    width: 70px; /* ajustez la taille selon vos besoins */
+    height: auto; /* garde le ratio d'aspect */
+}
+
+@media (max-width: 1200px) {
+
+    .support-section {
+        flex-direction: column; /* Affichez les éléments en colonne pour les écrans plus petits */
+    }
+
+    .support-item {
+        border-right: none; /* Supprimez la bordure à droite pour que chaque élément occupe la largeur totale */
+        padding-right: 0; /* Supprimez l'espacement à droite */
+        text-align: center; /* Centrez le contenu */
+        margin-bottom: 40px; /* Ajoutez un espacement entre les éléments */
+        border-top: 4px solid #ccc; /* Ajoute une bordure à droite */
+    }
+
+    .support-item p {
+        width: auto; /* Réinitialisez la largeur */
+        margin-left: 25%; /* Réinitialisez la marge */
+    }
+
+    .support-item img {
+        width: 80px; /* Ajustez la taille de l'image selon vos besoins */
+        height: auto; /* Gardez le ratio d'aspect */
+        margin-left: 5%; /* Réinitialisez la marge */
+    }
+}
+
+@media (max-width: 1000px) {
+    .support-item p {
+        width: 100%; /* Réinitialisez la largeur */
+        margin-left: 0; /* Réinitialisez la marge */
+    }
+    .Home {
+        margin-top: -20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .support-item p {
+        width: 100%; /* Réinitialisez la largeur */
+        margin-left: 0; /* Réinitialisez la marge */
+    }
+}
+
+.support-link {
+    font-family: 'minerva-modern', sans-serif;
+    font-style: normal;
+    font-size: 32px;
+    line-height: 43px; /* Hauteur de ligne 43px */
+    margin-bottom: 20px; /* Espacement en bas */
+}
+
+.learn-more-button {
+    background-color: #007bff; /* Couleur de fond */
+    color: #ffffff; /* Couleur du texte */
+    border: none; /* Supprimer la bordure */
+    padding: 10px 20px; /* Ajouter un espacement intérieur */
+    font-size: 16px; /* Taille de la police */
+    cursor: pointer; /* Afficher le curseur pointer */
+    border-radius: 10px; /* Ajouter une bordure arrondie */
+    text-decoration: none; /* Supprimer le soulignement par défaut */
+}
+.learn-more-button:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.content {
+    display: flex;
+}
+
+.image-container {
+    flex: 1;
+}
+
+.text-container {
+    flex: 3;
+    padding-left: 20px; /* Espacement entre l'image et le texte */
+    width: 10%;
+    max-width: 650px; /* Limiter la largeur maximale du texte à 400 pixels */
+    word-wrap: break-word;
+    margin-right: 250px;
+}
+
+.image-container img {
+    width: 650px; /* Ajustez la largeur de l'image selon vos besoins */
+    height: auto; /* Pour conserver les proportions de l'image */
+}
+
+.text-support {
+    text-align: left; /* Alignement du texte vers la gauche */
+    margin-top: 10px; /* Espacement en haut */
+    max-width: 950px; /* Limiter la largeur maximale du texte à 400 pixels */
+    word-wrap: break-word;
+    font-family: "freight-text-pro", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+@media (max-width: 1400px) {
+    .text-container {
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .image-container img {
+        width: 250px; /* Ajustez la largeur de l'image selon vos besoins */
+        height: auto; /* Pour conserver les proportions de l'image */
+    }
+}
+@media (max-width: 950px) {
+    .image-container img {
+        display: none;
+    }
+    .text-container {
+        margin-right: 20%;
+    }
+    .text-support {
+        text-align: center;
+        margin: 0;
+    }
+}
+
+/* ---------- Trust Company -------*/
+
+.trust-text-span {
+    color: #000000;
+    font-family: "Inter-LightItalic", sans-serif;
+    font-size: 48px;
+    line-height: 130%;
+    font-weight: 300;
+}
+
+.trustCompany-image {
+    height: 450px;
+    max-width:200%;
+}
+
+@media (max-width: 960px) {
+    .trust-text-span {
+        font-size: 38px;
+        /* Réduire la taille de la police */
+    }
+    .trustCompany-image {
+        height: 350px;
+    }
+}
+@media (max-width: 750px) {
+    .trustCompany-image {
+        height: 250px;
+    }
+}
+
+/* Animation de fondu */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
