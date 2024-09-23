@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tafili-consulting/static/css/main.780ea85f.css",
-    "main.js": "/tafili-consulting/static/js/main.d4d6abb0.js",
+    "main.js": "/tafili-consulting/static/js/main.c6a77111.js",
     "static/js/845.3fa5b084.chunk.js": "/tafili-consulting/static/js/845.3fa5b084.chunk.js",
     "static/media/MicrosoftBusinessCentral.mp4": "/tafili-consulting/static/media/MicrosoftBusinessCentral.06cf702c7b6f9d7e6a33.mp4",
     "static/media/TafiliAnimation1.mp4": "/tafili-consulting/static/media/TafiliAnimation1.22e6f824c458fb81b605.mp4",
@@ -33,11 +33,11 @@
     "static/media/Drilon.jpeg": "/tafili-consulting/static/media/Drilon.4c1eef072ee693f74937.jpeg",
     "index.html": "/tafili-consulting/index.html",
     "main.780ea85f.css.map": "/tafili-consulting/static/css/main.780ea85f.css.map",
-    "main.d4d6abb0.js.map": "/tafili-consulting/static/js/main.d4d6abb0.js.map",
+    "main.c6a77111.js.map": "/tafili-consulting/static/js/main.c6a77111.js.map",
     "845.3fa5b084.chunk.js.map": "/tafili-consulting/static/js/845.3fa5b084.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.780ea85f.css",
-    "static/js/main.d4d6abb0.js"
+    "static/js/main.c6a77111.js"
   ]
 }
