@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/tafili-consulting/static/css/main.9a3410c9.css",
+    "main.js": "/tafili-consulting/static/js/main.79c09b07.js",
+    "static/js/845.3fa5b084.chunk.js": "/tafili-consulting/static/js/845.3fa5b084.chunk.js",
+    "static/media/MicrosoftBusinessCentral.mp4": "/tafili-consulting/static/media/MicrosoftBusinessCentral.06cf702c7b6f9d7e6a33.mp4",
+    "static/media/TafiliAnimation1.mp4": "/tafili-consulting/static/media/TafiliAnimation1.22e6f824c458fb81b605.mp4",
+    "static/media/YetooLogoGarph.mp4": "/tafili-consulting/static/media/YetooLogoGarph.946398dbed6a41b8eb4c.mp4",
+    "static/media/powerBIHD.mp4": "/tafili-consulting/static/media/powerBIHD.af67c944f75f049d180d.mp4",
+    "static/media/TrustCompany.png": "/tafili-consulting/static/media/TrustCompany.bc9da2c10fa7eb5baa62.png",
+    "static/media/mbcHD.mp4": "/tafili-consulting/static/media/mbcHD.022b097e51af2734cd5b.mp4",
+    "static/media/fond-video.jpg": "/tafili-consulting/static/media/fond-video.357d63a7719e26cc0216.jpg",
+    "static/media/powerBIbackgroundBig.png": "/tafili-consulting/static/media/powerBIbackgroundBig.47bbdfe5d4d3caff3eb2.png",
+    "static/media/yetoo.jpeg": "/tafili-consulting/static/media/yetoo.afd0f3079b01cf785af6.jpeg",
+    "static/media/teamfond.jpg": "/tafili-consulting/static/media/teamfond.fc5128dc090f163cc8ef.jpg",
+    "static/media/powerBIgraph.png": "/tafili-consulting/static/media/powerBIgraph.7d78713340ea139b6ff7.png",
+    "static/media/yetoo_illu2.jpg": "/tafili-consulting/static/media/yetoo_illu2.8504cfe1d0e53781adb0.jpg",
+    "static/media/Alexandre.jpg": "/tafili-consulting/static/media/Alexandre.b6074e53fbeebddcf88b.jpg",
+    "static/media/MaximeVR.jpg": "/tafili-consulting/static/media/MaximeVR.454cc36c740b31f35df0.jpg",
+    "static/media/YetooPL.png": "/tafili-consulting/static/media/YetooPL.4144c76967b3854f1bd2.png",
+    "static/media/mbc3_3.png": "/tafili-consulting/static/media/mbc3_3.a668ee9d57931c4ec827.png",
+    "static/media/yetoo-logoV1-rbg.png": "/tafili-consulting/static/media/yetoo-logoV1-rbg.faf0d518234ec482e6b9.png",
+    "static/media/Business-Control.png": "/tafili-consulting/static/media/Business-Control.7f9722a0e9790e2f8cfb.png",
+    "static/media/YetooStockCategory.png": "/tafili-consulting/static/media/YetooStockCategory.65fbcf9f4ac5ef54e5e2.png",
+    "static/media/mbc3_1.png": "/tafili-consulting/static/media/mbc3_1.66bc08cf4d9f747edd0e.png",
+    "static/media/YetooStock.png": "/tafili-consulting/static/media/YetooStock.8af4f52f3f51b936bd5a.png",
+    "static/media/mbc3_4.png": "/tafili-consulting/static/media/mbc3_4.0afd8c8bfed575d532c9.png",
+    "static/media/mbc_col2.png": "/tafili-consulting/static/media/mbc_col2.b6ad2ab99d040f11f70b.png",
+    "static/media/mbc_col1.png": "/tafili-consulting/static/media/mbc_col1.1660f08d73a7c42fe1b7.png",
+    "static/media/mbc3_2.png": "/tafili-consulting/static/media/mbc3_2.fe1818b4784d38525c56.png",
+    "static/media/TafiliLogo2.png": "/tafili-consulting/static/media/TafiliLogo2.0be5936d34dd4ba6a12d.png",
+    "static/media/CFO.png": "/tafili-consulting/static/media/CFO.b8710ddad32cb679b679.png",
+    "static/media/Drilon.jpeg": "/tafili-consulting/static/media/Drilon.4c1eef072ee693f74937.jpeg",
+    "index.html": "/tafili-consulting/index.html",
+    "main.9a3410c9.css.map": "/tafili-consulting/static/css/main.9a3410c9.css.map",
+    "main.79c09b07.js.map": "/tafili-consulting/static/js/main.79c09b07.js.map",
+    "845.3fa5b084.chunk.js.map": "/tafili-consulting/static/js/845.3fa5b084.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9a3410c9.css",
+    "static/js/main.79c09b07.js"
+  ]
+}
