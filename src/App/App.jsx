@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <Router basename="/tafili-consulting">
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/website" element={<Home />} />
           <Route path="/mbc" element={<Mbc />} />
