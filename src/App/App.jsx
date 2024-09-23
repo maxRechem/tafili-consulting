@@ -10,10 +10,12 @@ import PowerBI from '../powerbi/PowerBI';
 import Yetoo from '../Yetoo/Yetoo';
 import About from '../AboutAndTeam/AboutAndTeam';
 import DataAnalyst from '../DataAnalyst/DataAnalyst';
+import Header from '../Header/Header';
 
 function App() {
   return (
     <Router basename="/tafili-consulting">
+      <Header />
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />
